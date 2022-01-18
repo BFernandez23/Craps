@@ -1,6 +1,7 @@
 
 /**
- * Write a description of class Die here.
+ * Creates a die object and has methods allowing one to roll a die
+ * and to access their previous roll
  *
  * @author Benji Fernandez
  * @version 2021-1-11
@@ -12,6 +13,7 @@ public class Die
 
     /**
      * Constructor for objects of class Die
+     * Die should have a random roll when object is constructed
      */
     public Die()
     {
@@ -20,17 +22,21 @@ public class Die
     }
 
     /**
-     * An example of a method - replace this comment with your own
+     * Rolls two dice and returns the roll
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return roll the roll that the die was
      */
     public int rollDie()
     {
         // put your code here
-        roll = (int) (Math.random() * 6 + 1);
+        roll = (int) (Math.random() * 6 + 1) + (int) (Math.random() * 6 + 1);
         return roll;
     }
+    /**
+     * Gets the roll value of a previous roll
+     *
+     * @return roll the roll that the die was
+     */
     public int getRoll()
     {
         return roll;
