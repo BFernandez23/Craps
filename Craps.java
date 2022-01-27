@@ -96,3 +96,42 @@ public class Craps
         System.out.println("Thanks for playing!");
     }
 }
+
+/*
+
+COMMENTS FROM THE INSTRUCTOR:
+
+This is a great version of the Craps program, Benji. Nothing fancy, but you've done
+a great job of implementing the requirements, especially the default "roll" and
+play again" options. Well done there!
+
+One detail I'll mention, in line 63 (if you've got line numbering turned on), you've
+got a conditional loop set up to run `while point != 0`. That's a bit of a hack,
+because we're not *really* looking for point to equal 0.
+
+The *better* strategy, and a legitimate use of that `while` loop, would be to 
+write it like this:
+
+    while (newRoll != point && newRoll != 7)
+    {
+        .
+        .
+        .
+    }
+
+or if that's tricky to make happen, even this:
+
+    boolean keepRolling = true;
+    while (keepRolling)
+    {
+        // See what's happening, and change status of 
+        // keepRolling depending on what happens
+    }
+
+A small detail. Otherwise, this is some fine work, Benji. Looking forward to
+seeing some amazing things from you in our upcoming projects!!! :)
+
+SCORE: 50/50
+
+*/
+
